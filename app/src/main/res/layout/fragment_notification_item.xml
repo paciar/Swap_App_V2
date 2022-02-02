@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NotificationItemFragment">
+
+    <TextView
+        android:id="@+id/trade_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="You have a trade offer!"
+        android:gravity="center"
+        android:textSize="30dp"
+        android:layout_marginTop="5dp"
+        android:textStyle="bold"
+        />
+
+    <TextView
+        android:id="@+id/whatYouGet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/trade_title"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:text="What you get:"
+        android:textSize="20sp" />
+
+    <LinearLayout
+        android:id="@+id/receiving"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/whatYouGet"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal">
+
+        <!-- when clicked, will go to item page-->
+        <ImageView
+            android:id="@+id/receivingImage"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:background="@drawable/default_image"
+            android:clickable="true" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/receivingItem"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="2dp"
+                android:text="Item being traded to you"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/receivingUser"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="2dp"
+                android:text="Owner"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/receivingEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="2dp"
+                android:text="Email"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/receivingPhone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="2dp"
+                android:text="Phone"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/whatYouGive"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/receiving"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:text="What you give:"
+        android:textSize="20sp" />
+
+    <LinearLayout
+        android:id="@+id/giving"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/whatYouGive"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal">
+
+        <!-- when clicked, will go to item page-->
+        <ImageView
+            android:id="@+id/givingImage"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:background="@drawable/default_image"
+            android:clickable="true" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- choose from a list of your items using spinner -->
+            <TextView
+                android:id="@+id/givingItem"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="2dp"
+                android:text="Item you are giving"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/givingUser"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="2dp"
+                android:text="Owner"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/givingEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="2dp"
+                android:text="Email"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/givingPhone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="2dp"
+                android:text="Phone"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/giving"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/acceptTrade"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/giving"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:padding="5dp"
+            android:text="Accept trade"
+            />
+
+        <View
+            android:layout_width="10dp"
+            android:layout_height="match_parent"
+            />
+
+        <Button
+            android:id="@+id/declineTrade"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/giving"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:padding="5dp"
+            android:text="Decline trade"
+            />
+
+    </LinearLayout>
+
+</RelativeLayout>

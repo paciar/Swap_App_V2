@@ -1,0 +1,27 @@
+<resources>
+    <!-- MAIN ACTIVITY -->
+    <string name="app_name">Swap App V2</string>
+    <string name="username">Enter username</string>
+    <string name="password">Enter password</string>
+    <string name="verifyPassword">Verify password</string>
+    <string name="email">Enter email address</string>
+    <string name="phone">Enter phone number (without dashes)</string>
+    <string name="signUp">Sign up</string>
+    <string name="signIn">Sign in</string>
+    <!-- MAIN ACTIVITY -->
+
+    <!-- POST FRAGMENT -->
+    <string name="uploadPhoto">Upload photo</string>
+    <string name="itemName">Enter item name</string>
+    <string name="itemDescription">Enter item description</string>
+    <string name="post">Post</string>
+    <!-- POST FRAGMENT -->
+
+    <!-- ITEM FRAGMENT -->
+    <string name="itemNameTest">Your item name</string>
+    <string name="usernameTest">Your username</string>
+    <string name="itemDescriptionTest">Your item description</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <!-- ITEM FRAGMENT -->
+</resources>
