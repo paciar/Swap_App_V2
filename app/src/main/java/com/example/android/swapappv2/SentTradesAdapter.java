@@ -35,7 +35,7 @@ public class SentTradesAdapter extends RecyclerView.Adapter<SentTradesAdapter.Vi
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = mInflater.inflate(R.layout.recyclerview_notification, parent, false);
+        View view = mInflater.inflate(R.layout.recyclerview_senttrade, parent, false);
         return new ViewHolder(view);
     }
 
@@ -50,15 +50,16 @@ public class SentTradesAdapter extends RecyclerView.Adapter<SentTradesAdapter.Vi
 
         String givingItemName = sItems.getItemName(givingItemID);
         holder.itemName.setText(givingItemName);
-        /*
+
+        String response = "Awaiting response from owner.";
+
         String tradeStatus = "Awaiting response from owner.";
         if (sNotifications.getTradeStatus(mSentTradesIDs.get(position)) == 1)
-            tradeStatus = "Trade accepted!";
+            response = "Trade accepted!";
         if (sNotifications.getTradeStatus(mSentTradesIDs.get(position)) == -1)
-            tradeStatus = "Trade declined!";
-        Log.i("TradeStatus", tradeStatus);
-        holder.itemTradeStatus.setText(tradeStatus);
-        */
+            response = "Trade declined!";
+        holder.response.setText(response);
+
     }
 
     @Override
@@ -68,14 +69,13 @@ public class SentTradesAdapter extends RecyclerView.Adapter<SentTradesAdapter.Vi
 
     public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         public ImageView itemImage;
-        public TextView itemName;
-        // public TextView itemTradeStatus;
+        public TextView itemName, response;
 
         public ViewHolder(View itemView) {
             super(itemView);
             itemImage = itemView.findViewById(R.id.receivingItemImage);
             itemName = itemView.findViewById(R.id.receivingItemName);
-            // itemTradeStatus = itemView.findViewById(R.id.tradeStatusText);
+            response = itemView.findViewById(R.id.response);
             itemView.setOnClickListener(this);
         }
 
@@ -103,7 +103,7 @@ public class SentTradesAdapter extends RecyclerView.Adapter<SentTradesAdapter.Vi
     }
 
     public void onItemClick(View view, int position) {
-        Log.i("NotificationClicked", "You clicked notification number " + getItem(position).toString() + ", which is at cell position " + position);
+        Log.i("NotificationClicked", "You clicked notification number " + getItem(position) + ", which is at cell position " + position);
     }
 
     public interface  ItemClickListener {

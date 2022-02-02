@@ -23,21 +23,13 @@
             android:textSize="20sp"
             android:textStyle="bold"/>
 
-        <LinearLayout
+        <TextView
+            android:id="@+id/response"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center_horizontal"
-            android:layout_marginTop="10dp">
-
-            <TextView
-                android:id="@+id/tradeStatusText"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="18sp"
-                android:textStyle="bold"/>
-
-        </LinearLayout>
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginTop="8dp"/>
 
     </LinearLayout>
 
