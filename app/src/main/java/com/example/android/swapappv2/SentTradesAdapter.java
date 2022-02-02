@@ -73,8 +73,8 @@ public class SentTradesAdapter extends RecyclerView.Adapter<SentTradesAdapter.Vi
 
         public ViewHolder(View itemView) {
             super(itemView);
-            itemImage = itemView.findViewById(R.id.receivingItemImage);
-            itemName = itemView.findViewById(R.id.receivingItemName);
+            itemImage = itemView.findViewById(R.id.givingItemImage);
+            itemName = itemView.findViewById(R.id.givingItemName);
             response = itemView.findViewById(R.id.response);
             itemView.setOnClickListener(this);
         }
